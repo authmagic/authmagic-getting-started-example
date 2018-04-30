@@ -1,0 +1,17 @@
+{
+  "name": "authmagic-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./node_modules/authmagic/app"
+  },
+  "dependencies": {
+    "authmagic": "../authmagic",
+    "authmagic-cli": "../authmagic-cli",
+    "authmagic-email": "file:../authmagic-email"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
