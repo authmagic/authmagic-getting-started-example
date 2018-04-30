@@ -13,7 +13,14 @@
 	}
 
 	async function check(z) {
-		const response = await fetch(`/key/verify/${encodeURIComponent(z)}`);
+        const response = await fetch('/token', {
+          body: JSON.stringify({z}),
+          mode: 'cors',
+          method: 'post',
+          headers: {
+            'content-type': 'application/json'
+          },
+        });
 		if(response.status === 200) {
 			const {token} = await response.json();
 			localStorage.setItem('token', token);

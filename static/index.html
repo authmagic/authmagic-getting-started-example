@@ -54,7 +54,14 @@
 			return res.json();
 		}).then(function({zp}) {
 			const interval = setInterval(async function() {
-				const res = await fetch('/token/'+zp);
+				const res = await fetch('/token', {
+                  body: JSON.stringify({zp}),
+                  mode: 'cors',
+                  method: 'post',
+                  headers: {
+                    'content-type': 'application/json'
+                  },
+                });
 				if(res.status === 200) {
 					clearInterval(interval);
 					const {token} = await res.json();
