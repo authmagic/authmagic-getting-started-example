@@ -9,7 +9,8 @@
   "dependencies": {
     "authmagic": "../authmagic",
     "authmagic-cli": "../authmagic-cli",
-    "authmagic-email": "file:../authmagic-email"
+    "authmagic-email-plugin": "file:../authmagic-email-plugin",
+    "authmagic-timerange-core": "file:../authmagic-timerange-core"
   },
   "keywords": [],
   "author": "",

@@ -1,12 +1,13 @@
 module.exports = {
+  "core": "authmagic-timerange-core",
   "plugins": [
     {
-      "name": "authmagic-email",
-      "source": "../authmagic-email"
+      "name": "authmagic-email-plugin",
+      "source": "../authmagic-email-plugin"
     }
   ],
   "params": {
-    "authmagic-email": {
+    "authmagic-email-plugin": {
       "isTest": true,
       "url": "http://localhost:3000",
       "mailer": {
@@ -27,5 +28,5 @@ module.exports = {
   "key": "fd5eb88c6955b86d",
   "expiresIn": 1200,
   "port": 3000,
-  "sendKeyPlugin": "authmagic-email"
+  "sendKeyPlugin": "authmagic-email-plugin"
 };
