@@ -12,9 +12,9 @@
 	    return decodeURIComponent(results[2].replace(/\+/g, " "));
 	}
 
-	async function check(z) {
+	async function check(ekey) {
         const response = await fetch('/token', {
-          body: JSON.stringify({z}),
+          body: JSON.stringify({ekey}),
           mode: 'cors',
           method: 'post',
           headers: {
@@ -30,8 +30,8 @@
 		}
 	}
 
-	const z = getParameterByName('z');
-	check(z);
+	const ekey = getParameterByName('ekey');
+	check(ekey);
 </script>
 </body>
 </html>

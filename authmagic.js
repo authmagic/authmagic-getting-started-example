@@ -21,7 +21,7 @@ module.exports = {
       },
       "from": "AuthMailer",
       "subject": "Your Magic Link",
-      "link": "{{pluginConfig.url}}/check.html?z={{z | urlencode}}"
+      "link": "{{pluginConfig.url}}/check.html?ekey={{ekey | urlencode}}"
     }
   },
   "duration": 300,

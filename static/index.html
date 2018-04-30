@@ -52,10 +52,10 @@
 		    },
 		}).then(function(res) {
 			return res.json();
-		}).then(function({zp}) {
+		}).then(function({eproof}) {
 			const interval = setInterval(async function() {
 				const res = await fetch('/token', {
-                  body: JSON.stringify({zp}),
+                  body: JSON.stringify({eproof}),
                   mode: 'cors',
                   method: 'post',
                   headers: {
