@@ -10,12 +10,6 @@ module.exports = {
     }
   ],
   "params": {
-    "authmagic-timerange-core": {
-      "duration": 300,
-      "key": "fd5eb88c6955b86d",
-      "sendKeyPlugin": "authmagic-email-plugin",
-      "expiresIn": 1200
-    },
     "authmagic-email-plugin": {
       "isTest": true,
       "url": "http://localhost:3000",
@@ -31,7 +25,14 @@ module.exports = {
       "from": "AuthMailer",
       "subject": "Your Magic Link",
       "link": "{{pluginConfig.url}}/check.html?ekey={{ekey | urlencode}}"
+    },
+    "authmagic-timerange-core": {
+      "duration": 300,
+      "key": "106827392fbe9a1b",
+      "sendKeyPlugin": "authmagic-email-plugin",
+      "expiresIn": 1200
     }
   },
-  "port": 3000
+  "port": 3000,
+  "sendKeyPlugin": "authmagic-email-plugin"
 };
