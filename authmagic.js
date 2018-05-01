@@ -1,5 +1,8 @@
 module.exports = {
-  "core": "authmagic-timerange-core",
+  "core": {
+    "name": "authmagic-timerange-core",
+    "source": "../authmagic-timerange-core"
+  },
   "plugins": [
     {
       "name": "authmagic-email-plugin",
@@ -7,6 +10,12 @@ module.exports = {
     }
   ],
   "params": {
+    "authmagic-timerange-core": {
+      "duration": 300,
+      "key": "fd5eb88c6955b86d",
+      "sendKeyPlugin": "authmagic-email-plugin",
+      "expiresIn": 1200
+    },
     "authmagic-email-plugin": {
       "isTest": true,
       "url": "http://localhost:3000",
@@ -24,9 +33,5 @@ module.exports = {
       "link": "{{pluginConfig.url}}/check.html?ekey={{ekey | urlencode}}"
     }
   },
-  "duration": 300,
-  "key": "fd5eb88c6955b86d",
-  "expiresIn": 1200,
-  "port": 3000,
-  "sendKeyPlugin": "authmagic-email-plugin"
+  "port": 3000
 };
