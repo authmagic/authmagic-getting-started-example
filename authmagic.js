@@ -1,7 +1,7 @@
 module.exports = {
   "core": {
-    "name": "authmagic-timerange-core",
-    "source": "../authmagic-timerange-core"
+    "name": "authmagic-timerange-stateless-core",
+    "source": "../authmagic-timerange-stateless-core"
   },
   "plugins": [
     {
@@ -23,10 +23,9 @@ module.exports = {
         "secure": false
       },
       "from": "AuthMailer",
-      "subject": "Your Magic Link",
-      "link": "{{pluginConfig.url}}/check.html?ekey={{ekey | urlencode}}"
+      "subject": "Your Magic Link"
     },
-    "authmagic-timerange-core": {
+    "authmagic-timerange-stateless-core": {
       "duration": 300,
       "key": "106827392fbe9a1b",
       "sendKeyPlugin": "authmagic-email-plugin",

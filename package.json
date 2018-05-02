@@ -10,7 +10,7 @@
     "authmagic": "../authmagic",
     "authmagic-cli": "../authmagic-cli",
     "authmagic-email-plugin": "file:../authmagic-email-plugin",
-    "authmagic-timerange-core": "file:../authmagic-timerange-core"
+    "authmagic-timerange-stateless-core": "file:../authmagic-timerange-stateless-core"
   },
   "keywords": [],
   "author": "",
