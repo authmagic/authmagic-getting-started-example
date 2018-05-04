@@ -8,6 +8,7 @@
 <div id="user" style="display: none">
 	<div>Welcome, user!</div>
 	<div id="info"></div>
+	<button onclick="refreshToken()">Refresh token</button>
 	<button onclick="logout()">Logout</button>
 </div>
 <script>
@@ -38,6 +39,27 @@
 	  location.reload();
 	}
 
+	async function refreshToken() {
+      const token = localStorage.getItem('token');
+      const refreshToken = localStorage.getItem('refreshToken');
+      const res = await fetch('/token', {
+        body: JSON.stringify({token, refreshToken}),
+        mode: 'cors',
+        method: 'post',
+        headers: {
+          'content-type': 'application/json'
+        },
+      });
+      if(res.status === 200) {
+        const {token, refreshToken} = await res.json();
+        localStorage.setItem('token', token);
+        localStorage.setItem('refreshToken', refreshToken);
+        validate();
+      } else {
+        console.log('forbidden');
+      }
+	}
+
 	validate();
 	document.getElementById('go').onclick = function() {
 		const emailElement = document.getElementById('email');
@@ -64,8 +86,9 @@
                 });
 				if(res.status === 200) {
 					clearInterval(interval);
-					const {token} = await res.json();
-					localStorage.setItem('token', token);
+                    const {token, refreshToken} = await response.json();
+                    localStorage.setItem('token', token);
+                    localStorage.setItem('refreshToken', refreshToken);
                     validate();
 				} else {
 					console.log('forbidden');

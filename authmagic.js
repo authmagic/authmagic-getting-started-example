@@ -32,7 +32,7 @@ module.exports = {
     "authmagic-timerange-stateless-core": {
       "duration": 300,
       "key": "106827392fbe9a1b",
-      "sendKeyPlugin": "authmagic-proxy-plugin",
+      "sendKeyPlugin": "authmagic-email-plugin",
       "expiresIn": 1200
     },
     "authmagic-proxy-plugin": {

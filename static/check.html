@@ -22,8 +22,9 @@
           },
         });
 		if(response.status === 200) {
-			const {token} = await response.json();
+			const {token, refreshToken} = await response.json();
 			localStorage.setItem('token', token);
+            localStorage.setItem('refreshToken', refreshToken);
 			location.href = '/';
 		} else {
 			document.getElementById('check').innerHTML = 'Key is invalid';
