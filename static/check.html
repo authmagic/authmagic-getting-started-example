@@ -25,7 +25,7 @@
 			const {token, refreshToken} = await response.json();
 			localStorage.setItem('token', token);
             localStorage.setItem('refreshToken', refreshToken);
-			location.href = '/';
+            location.href = '/';
 		} else {
 			document.getElementById('check').innerHTML = 'Key is invalid';
 		}

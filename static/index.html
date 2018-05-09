@@ -1,11 +1,31 @@
 <html>
+<head>
+    <style>
+        #stage {
+            display: none;
+        }
+
+        #user {
+            display: none;
+        }
+
+        input {
+            width: 200px;
+        }
+    </style>
+</head>
 <body>
 <div id="guest">
 	<input type="email" id="email" placeholder="enter email" />
 	<button id="go">Go</button>
-	<div id="wait" style="display: none">Open the link in the email</div>
+	<div>
+		<input id="redirect-url" placeholder="Enter url for redirect">
+	</div>
 </div>
-<div id="user" style="display: none">
+<div id="stage">
+	<div id="wait" >Open the link in the email</div>
+</div>
+<div id="user">
 	<div>Welcome, user!</div>
 	<div id="info"></div>
 	<button onclick="refreshToken()">Refresh token</button>
@@ -63,8 +83,13 @@
 	validate();
 	document.getElementById('go').onclick = function() {
 		const emailElement = document.getElementById('email');
+		const redirectUrl = document.getElementById('redirect-url').value;
 		const email = emailElement.value;
-		const data = {user: email, params: {r: Math.random()}};
+		const data = {
+		  user: email,
+          params: {r: Math.random()},
+          redirectUrl,
+		};
 		fetch('/key', {
 			body: JSON.stringify(data),
 			mode: 'cors',
@@ -86,7 +111,7 @@
                 });
 				if(res.status === 200) {
 					clearInterval(interval);
-                    const {token, refreshToken} = await response.json();
+                    const {token, refreshToken} = await res.json();
                     localStorage.setItem('token', token);
                     localStorage.setItem('refreshToken', refreshToken);
                     validate();
@@ -95,9 +120,10 @@
 				}
 			}, 1000);
 		});
-		emailElement.style.display = 'none';
-		document.getElementById('wait').style.display = 'block';
+        document.getElementById('guest').style.display = 'none';
+		document.getElementById('stage').style.display = 'block';
 	};
+	document.getElementById('redirect-url').value = `${location.protocol}//${location.host}/check.html`;
 </script>
 </body>
 </html>
