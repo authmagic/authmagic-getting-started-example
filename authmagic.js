@@ -4,6 +4,9 @@ module.exports = {
     "source": "../authmagic-timerange-stateless-core"
   },
   "plugins": {
+    "authmagic-email-plugin": {
+      "source": "../authmagic-email-plugin"
+    },
     "authmagic-smsc-plugin": {
       "source": "../authmagic-smsc-plugin"
     }
@@ -15,9 +18,23 @@ module.exports = {
       "sendKeyPlugin": "authmagic-smsc-plugin",
       "expiresIn": 1200
     },
+    "authmagic-email-plugin": {
+      "isTest": true,
+      "mailer": {
+        "auth": {
+          "user": "",
+          "pass": ""
+        },
+        "host": "smtp.ethereal.email",
+        "port": 587,
+        "secure": false
+      },
+      "from": "AuthMailer",
+      "subject": "Your Magic Link"
+    },
     "authmagic-smsc-plugin": {
-      "login": "" || process.env.SMSC_LOGIN,
-      "password": "" || process.env.SMSC_PASSWORD
+      "login": "",
+      "password": ""
     }
   },
   "port": 3000
