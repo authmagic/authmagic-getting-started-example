@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authenticate</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+<div class="container">
+    <form action="/key" method="post" class="row">
+        <h1>AuthMagic</h1>
+        <div class="input-group mb-3">
+            <input type="text" name="email" class="form-control" placeholder="Enter your email" aria-label="Enter your email" aria-describedby="basic-addon2" type="email">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-primary" type="button">Send authorization link</button>
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" name="redirect-url">Redirect URL</span>
+            </div>
+            <input type="text" name="redirect-url" class="form-control" aria-label="Redirect URL" aria-describedby="basic-addon1">
+        </div>
+    </form>
+</div>
+</body>
+</html>

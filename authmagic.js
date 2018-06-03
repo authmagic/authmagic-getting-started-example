@@ -6,18 +6,9 @@ module.exports = {
   "plugins": {
     "authmagic-email-plugin": {
       "source": "../authmagic-email-plugin"
-    },
-    "authmagic-smsc-plugin": {
-      "source": "../authmagic-smsc-plugin"
     }
   },
   "params": {
-    "authmagic-timerange-stateless-core": {
-      "duration": 300,
-      "key": "aeed48faee37c6a4",
-      "sendKeyPlugin": "authmagic-smsc-plugin",
-      "expiresIn": 1200
-    },
     "authmagic-email-plugin": {
       "isTest": true,
       "mailer": {
@@ -32,10 +23,16 @@ module.exports = {
       "from": "AuthMailer",
       "subject": "Your Magic Link"
     },
-    "authmagic-smsc-plugin": {
-      "login": "",
-      "password": ""
+    "authmagic-timerange-stateless-core": {
+      "duration": 300,
+      "key": "ad5de0e6c809b89b",
+      "sendKeyPlugin": "authmagic-email-plugin",
+      "expiresIn": 1200
     }
   },
-  "port": 3000
+  "port": 3000,
+  "theme": {
+    "name": "authmagic-link-email-phone-bootstrap-theme",
+    "source": "../authmagic-link-email-phone-bootstrap-theme"
+  }
 };

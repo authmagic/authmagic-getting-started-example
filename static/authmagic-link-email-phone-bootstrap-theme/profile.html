@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile - AuthMagic</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1>Welcome!</h1>
+        <div class="input-group mb-3 center" id="info"></div>
+        <div class="input-group mb-3">
+            <div class="btn-group center" role="group">
+                <button type="button" class="btn btn-warning" onclick="refreshToken()">Refresh token</button>
+                <button type="button" class="btn btn-danger" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
