@@ -33,6 +33,6 @@ module.exports = {
   "port": 3000,
   "theme": {
     "name": "authmagic-link-email-phone-bootstrap-theme",
-    "source": "../authmagic-link-email-phone-bootstrap-theme"
+    "source": "./static/authmagic-link-email-phone-bootstrap-theme"
   }
 };

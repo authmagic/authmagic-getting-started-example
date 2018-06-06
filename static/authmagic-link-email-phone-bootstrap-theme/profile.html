@@ -8,16 +8,19 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
+    <ul class="row">
         <h1>Welcome!</h1>
-        <div class="input-group mb-3 center" id="info"></div>
+        <ul class="list-group list-group-flush mb-3 center" id="info">
+            
+        </ul>
         <div class="input-group mb-3">
             <div class="btn-group center" role="group">
-                <button type="button" class="btn btn-warning" onclick="refreshToken()">Refresh token</button>
-                <button type="button" class="btn btn-danger" onclick="logout()">Logout</button>
+                <button type="button" id="refresh" class="btn btn-warning">Refresh token</button>
+                <button type="button" id="logout" class="btn btn-danger">Logout</button>
             </div>
         </div>
     </div>
 </div>
+<script src="scripts/profile.js"></script>
 </body>
 </html>
