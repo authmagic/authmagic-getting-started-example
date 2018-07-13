@@ -1,11 +1,10 @@
 module.exports = {
   "core": {
     "name": "authmagic-timerange-stateless-core",
-    "source": "../authmagic-timerange-stateless-core"
   },
   "plugins": {
     "authmagic-email-plugin": {
-      "source": "../authmagic-email-plugin"
+      "name": "authmagic-email-plugin"
     }
   },
   "params": {
@@ -33,6 +32,5 @@ module.exports = {
   "port": 3000,
   "theme": {
     "name": "authmagic-link-email-phone-bootstrap-theme",
-    "source": "../authmagic-link-email-phone-bootstrap-theme"
   }
 };
