@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/knyga/authmagic-example.git"
+    "url": "git+https://github.com/authmagic/authmagic-example.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/knyga/authmagic-example/issues"
+    "url": "https://github.com/authmagic/authmagic-example/issues"
   },
-  "homepage": "https://github.com/knyga/authmagic-example#readme",
+  "homepage": "https://github.com/authmagic/authmagic-example#readme",
   "dependencies": {
     "authmagic": "file:../authmagic",
     "authmagic-cli": "file:../authmagic-cli",
