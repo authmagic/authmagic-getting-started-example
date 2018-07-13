@@ -8,3 +8,6 @@ authmagic init -e
 authmagic install
 authmagic
 ```
+
+## Demo
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=wkNz6LbGZwg" target="_blank"><img src="http://img.youtube.com/vi/wkNz6LbGZwg/0.jpg" alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
