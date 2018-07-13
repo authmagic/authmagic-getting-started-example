@@ -25,7 +25,7 @@ module.exports = {
     },
     "authmagic-timerange-stateless-core": {
       "duration": 300,
-      "key": "ad5de0e6c809b89b",
+      "key": "310531d085be5e9c",
       "sendKeyPlugin": "authmagic-email-plugin",
       "expiresIn": 1200
     }
