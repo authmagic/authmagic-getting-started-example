@@ -11,6 +11,7 @@ authmagic init -e
 authmagic install
 authmagic
 ```
+Note: make sure name in your package.json is not named as `authmagic` if you do not want to get an error `npm refusing to install as a dependency of itself`.
 
 ## Demo
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=wkNz6LbGZwg" target="_blank"><img src="http://img.youtube.com/vi/wkNz6LbGZwg/0.jpg" alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
