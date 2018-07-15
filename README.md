@@ -2,7 +2,7 @@
 
 # authmagic-getting-started-example
 Example of <a href="https://github.com/authmagic/authmagic">authmagic</a> application created with <a href="https://github.com/authmagic/authmagic-timerange-stateless-core">authmagic-timerange-stateless-core</a>, <a href="https://github.com/authmagic/authmagic-email-plugin">authmagic-email-plugin</a> and <a href="https://github.com/authmagic/authmagic-link-email-phone-bootstrap-theme">authmagic-link-email-phone-bootstrap-theme</a>.
-Node'd version higher or equal to 8.10.0 is required.
+Node's version higher or equal to 8.10.0 is required.
 
 ## How to create same example app
 ```
