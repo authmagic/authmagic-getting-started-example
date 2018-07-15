@@ -6,6 +6,7 @@ Example of <a href="https://github.com/authmagic/authmagic">authmagic</a> applic
 ## How to create same example app
 ```
 npm install -g authmagic-cli
+npm init -y
 authmagic init -e
 authmagic install
 authmagic
