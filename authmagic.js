@@ -1,10 +1,12 @@
 module.exports = {
   "core": {
     "name": "authmagic-timerange-stateless-core",
+    "source": "../authmagic-timerange-stateless-core"
   },
   "plugins": {
     "authmagic-email-plugin": {
-      "name": "authmagic-email-plugin"
+      "name": "authmagic-email-plugin",
+      "source": "../authmagic-email-plugin"
     }
   },
   "params": {
