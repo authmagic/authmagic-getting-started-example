@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/authmagic/authmagic-getting-started-example#readme",
   "dependencies": {
-    "authmagic": "file:../authmagic",
-    "authmagic-cli": "file:../authmagic-cli",
-    "authmagic-email-plugin": "file:../authmagic-email-plugin",
+    "authmagic": "file:/Users/oknyga/www/authmagic/authmagic",
+    "authmagic-cli": "file:/Users/oknyga/www/authmagic/authmagic-cli",
+    "authmagic-email-plugin": "file:/Users/oknyga/www/authmagic/authmagic-email-plugin",
     "authmagic-link-email-phone-bootstrap-theme": "0.0.2",
-    "authmagic-timerange-stateless-core": "file:../authmagic-timerange-stateless-core"
+    "authmagic-timerange-stateless-core": "file:/Users/oknyga/www/authmagic/authmagic-timerange-stateless-core"
   }
 }
