@@ -20,7 +20,7 @@
   "dependencies": {
     "authmagic": "0.0.7",
     "authmagic-email-plugin": "0.0.6",
-    "authmagic-link-email-phone-bootstrap-theme": "0.0.7",
+    "authmagic-link-email-phone-bootstrap-theme": "0.0.8",
     "authmagic-timerange-stateless-core": "0.0.8"
   }
 }
