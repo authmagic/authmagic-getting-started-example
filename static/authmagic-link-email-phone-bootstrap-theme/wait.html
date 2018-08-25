@@ -7,14 +7,21 @@
     <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
+
 <div class="container">
-    <div class="row">
+    <form action="/key" method="post" class="row">
         <h1>AuthMagic</h1>
-        <div class="full center">Open the link in the email:</div>
-        <div class="full center"><img class="email-example" src="images/email.png" /></div>
-        <div class="input-group mb-3 loader center"></div>
-    </div>
+        <div class="full center">Open the link in the email or enter secutiry code:</div>
+        <div class="input-group mb-3">
+            <input type="text" id="code" name="code" class="form-control" placeholder="Enter security code" aria-label="Enter security code" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button id="go" class="btn btn-primary" type="button">Login</button>
+            </div>
+        </div>
+    </form>
 </div>
+
+
 <script src="scripts/polyfill.min.js"></script>
 <script src="scripts/wait.js"></script>
 </body>

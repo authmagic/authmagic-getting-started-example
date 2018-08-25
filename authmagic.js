@@ -28,7 +28,12 @@ module.exports = {
       "duration": 300,
       "key": "310531d085be5e9c",
       "sendKeyPlugin": "authmagic-email-plugin",
-      "expiresIn": 1200
+      "expiresIn": "20m",
+      "refreshExpiresIn": "2d",
+      "securityKeyRule": {
+        length: 6,
+        charset: "numeric",
+      },
     }
   },
   "port": 3000,

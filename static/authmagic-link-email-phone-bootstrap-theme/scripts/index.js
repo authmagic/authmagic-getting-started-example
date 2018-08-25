@@ -1,6 +1,6 @@
 document.getElementById('redirect-url').value =
   getParameterByName('redirect') ? getParameterByName('redirect') :
-  `${location.protocol}//${location.host}/check.html`;
+    `${location.protocol}//${location.host}/check.html`;
 
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;

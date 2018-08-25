@@ -6,8 +6,15 @@ function parseJwt(token) {
 
 async function validate() {
   const token = localStorage.getItem('token');
-  const response = await fetch(`/token/status/${encodeURIComponent(token)}`);
-  if(response.status === 200) {
+  const res = await fetch('/token/status', {
+    body: JSON.stringify({token}),
+    mode: 'cors',
+    method: 'post',
+    headers: {
+      'content-type': 'application/json'
+    },
+  });
+  if(res.status === 200) {
     renderInfo();
   }
 }

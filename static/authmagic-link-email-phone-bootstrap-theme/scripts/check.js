@@ -2,7 +2,7 @@ function getParameterByName(name, url) {
   if (!url) url = window.location.href;
   name = name.replace(/[\[\]]/g, "\\$&");
   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
+    results = regex.exec(url);
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
@@ -27,6 +27,9 @@ async function check(ekey) {
   }
 }
 
-const ekey = getParameterByName('ekey');
-
-check(ekey);
+if(localStorage.getItem('token') && !getParameterByName('ekey')) {
+  location.href = '/profile.html';
+} else {
+  const ekey = getParameterByName('ekey');
+  check(ekey);
+}
