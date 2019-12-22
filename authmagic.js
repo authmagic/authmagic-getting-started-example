@@ -34,6 +34,11 @@ module.exports = {
         length: 6,
         charset: "numeric",
       },
+      // for debugging and app validations
+      // username: securityCode
+      fixedSecurityCodes: {
+        "oleksandrknyga@gmail.com": "123456"
+      },
     }
   },
   "port": 3000,
